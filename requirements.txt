@@ -5,3 +5,7 @@ tensorflow
 scikit-learn
 flask-restful
 matplotlib
+flask_sqlalchemy 
+flask_login 
+flask_bcrypt 
+flask_wtf
