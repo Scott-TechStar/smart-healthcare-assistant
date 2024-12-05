@@ -12,6 +12,7 @@ class UserProfile(db.Model):
     weight = db.Column(db.Integer, nullable=True)
     height = db.Column(db.Integer, nullable=True)
 
+
 class Prediction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     prediction = db.Column(db.String(150), nullable=False)
@@ -28,7 +29,7 @@ def home():
 def register():
     if request.method == 'POST':
         username = request.form['username']
-        password = generate_password_hash(request.form['password'], method='sha256')
+        password = generate_password_hash(request.form['password'])
         user = UserProfile(username=username, password=password)
         db.session.add(user)
         db.session.commit()
