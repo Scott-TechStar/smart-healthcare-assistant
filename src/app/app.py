@@ -1,6 +1,9 @@
+import sys
+print(sys.path)
+
 from flask import Flask, jsonify, request
-from src.models.health_model import predict_health_risk
-from src.utils.data_preprocessing import preprocess_data
+from ..models.health_model import predict_health_risk
+from ..utils.data_preprocessing import preprocess_data
 
 app = Flask(__name__)
 

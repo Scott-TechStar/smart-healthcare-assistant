@@ -1,5 +1,5 @@
 import pytest
-from src.models.health_model import train_model, predict_health_risk
+from ..models.health_model import train_model, predict_health_risk
 
 def test_train_model():
     # Mock data for testing
